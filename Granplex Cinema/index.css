@@ -1,0 +1,376 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --movie: url(movies/1.jpg);
+  --site: url(assets/site1.jpg);
+}
+
+
+body{
+  background-color: rgb(0, 0, 0);
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: rgba(249, 117, 117, 0.228);
+}
+
+#logo {
+  width: 10rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+#header ul{
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  position: relative;
+  left: 60%;
+}
+
+#header ul li a{
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+
+#header ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 99%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: bottom;
+  transition: all 0.4s ease-in-out;
+}
+
+#header ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom ;
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  z-index: -100;
+}
+
+.header-background img{
+  width: 99vw;
+  height: 90vh;
+  opacity: 100%;
+}
+
+#buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 90vh;
+  color: white;
+}
+
+.book-show {
+  padding: 0.7rem;
+  border: none;
+  background-color: rgba(245, 145, 145, 0.465);
+  border-radius: 1rem;
+  color: white;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+
+}
+.book-show a{
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+
+.book-show a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 99%;
+  height: 3px;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: bottom;
+  transition: all 0.4s ease-in-out;
+}
+
+.book-show a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom ;
+}
+
+#intro {
+  position: absolute;
+  top: 32vh;
+  left: 37vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#intro h1, h3{
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  color: white;
+}
+#intro h1 {
+  font-size: 3rem;
+}
+#intro h3 {
+  font-size: 1.5rem;
+}
+
+.latest-shows {
+  width: 99vw;
+  height: 80vh;
+  background: linear-gradient( rgba(0, 0, 0, 0.809), rgba(0, 0, 0, 0.809) ), var(--movie);
+  background-repeat: no-repeat;
+  background-size: 99vw 80vh;
+  position: relative;
+  margin-bottom: 10vh;
+}
+
+.latest-show-mini {
+  background: var(--movie);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 70vh;
+  width: 32vw;
+  position: absolute;
+  top: 8%;
+  left: 60%;
+}
+
+.latest-shows img {
+  height: 70vh;
+  position: absolute;
+  top: 8%;
+  left: 60%;
+}
+
+.latest-shows button {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  padding: 0.9rem;
+  font: 0.8rem;
+}
+
+
+.latest-shows h1 {
+  text-transform: capitalize;
+  position: absolute;
+  top: 35%;
+  left: 21%;
+  color: white;
+  font-family:  'Kdam Thmor Pro', sans-serif;
+}
+
+.footer {
+  width: 98.8vw;
+  height: 5vh;
+  background-color: rgba(249, 117, 117, 0.228);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer p {
+  color: white;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.about {
+  width: 98vw;
+  height: 100vh;
+  background: linear-gradient( rgba(0, 0, 0, 0.809), rgba(0, 0, 0, 0.809) ), url(assets/anika-mikkelson-dWYjy9zIiF8-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: 99vw 80vh;
+  padding: 0 12rem;
+  padding-top: 5rem;
+}
+
+.about h1 {
+  color: white;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  text-transform: uppercase;
+}
+
+.about p {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.site-display {
+  width: 73vw;
+  height: 80vh;
+  background: var(--site);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 16rem;
+  margin-bottom: 5rem;
+}
+
+/* CONTACT US  */
+
+.background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact-form {
+  width: 70vw;
+  height: 80vh;
+  margin-top: 10vh;
+  border-radius: 50px;
+  background-color: rgba(153, 152, 152, 0.137);
+  display: flex;
+  gap: 2px
+  position: relative;	
+
+}
+
+.section {
+  width: 50%;
+  height: 100%;
+  color: rgb(215, 215, 215);
+}
+
+.form-area {
+  color: rgb(215, 215, 215);
+  padding-left: 55px;
+  padding-top: 30px;
+  font-weight: bold;
+}
+
+.inputs{
+  background-color: rgb(53, 53, 53);
+  border: none;
+  height: 45px;
+  width: 80%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  box-shadow: 5px 5px 30px rgba(110, 110, 110, 0.697);
+  padding: 5px 0 5px 15px;
+  color: white;
+  font-size: 1rem;  
+}
+
+.msg {
+  height: 150px;
+  padding-top: 8px;
+  resize: none;
+}
+
+.inputs:hover {
+  box-shadow: 3px 3px 30px rgba(194, 194, 194, 0.697);
+}
+
+.inputs:focus {
+  box-shadow: 3px 3px 30px rgba(194, 194, 194, 0.697);
+  outline: 1px solid rgb(53, 53, 53);
+}
+
+#send {
+  background-color: rgb(53, 53, 53);
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(215, 215, 215);
+  border-radius: 10px;
+  float: right;
+  margin-right: 6rem;
+  box-shadow: 3px 3px 30px rgba(110, 110, 110, 0.697);
+  outline: none;
+}
+
+#send:hover, #send:focus {
+  box-shadow: 3px 3px 30px rgba(194, 194, 194, 0.697);
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  position: relative;
+
+}
+
+.socials::before {
+  content: "";
+  position: absolute;
+  top: 123px;
+  left: 0;
+  width: 2px;
+  height: 50%;
+  background-color: rgba(110, 110, 110, 0.697);
+}
+
+.socials h1{
+  font-size: 3rem;
+}
+
+.socials a img{
+  position: absolute;
+  width: 40px;
+  top: 10rem;  
+  left: 0;
+}
+
+#insta-icon {
+  top: 15rem;
+  left: 8rem;
+}
+
+#fb-icon {
+  top: 11rem;
+  left: 8rem;
+}
+
+.socials h3{
+  position: absolute;
+  top: 10rem;
+}
+
+#fb{
+  top: 11.3rem;
+  left: 12rem;
+}
+
+#insta{
+  top: 15.3rem;
+  left: 12rem;
+}
+
+#fb:hover,
+#fb-icon:hover{
+  box-shadow: 5px 5px 30px rgb(30, 0, 255);
+  background-color: rgba(30, 0, 255, 0.5);
+}
+
+#insta:hover,
+#insta-icon:hover{
+  box-shadow: 5px 5px 30px rgb(255, 0, 132);
+  background-color: rgba(255, 0, 132, 0.42);
+}
